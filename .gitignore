@@ -1,0 +1,17 @@
+# Flutter
+ecocycle/.dart_tool/
+ecocycle/.pub/
+ecocycle/build/
+ecocycle/.flutter-plugins
+ecocycle/.flutter-plugins-dependencies
+ecocycle/android/.gradle/
+ecocycle/android/local.properties
+ecocycle/.idea/
+ecocycle/*.iml
+
+# Node.js
+ecocycle_backend/node_modules/
+ecocycle_backend/npm-debug.log*
+
+# Backend secrets
+ecocycle_backend/.env
