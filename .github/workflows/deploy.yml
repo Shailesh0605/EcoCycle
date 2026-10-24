@@ -26,7 +26,7 @@ jobs:
 
       - name: Build Web App
         run: |
-          cd ecocycle
+          if [ -d "ecocycle" ]; then cd ecocycle; fi
           flutter pub get
           flutter build web --release --base-href "/EcoCycle/"
 
@@ -34,4 +34,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ecocycle/build/web
+          publish_dir: ${{ steps.build.outputs.dir || './ecocycle/build/web' }}
